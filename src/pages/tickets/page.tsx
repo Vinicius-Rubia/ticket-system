@@ -2,10 +2,10 @@ import { SubHeader } from "@/components/sub-header";
 import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
 
-export function DashboardPage() {
+export function TicketsPage() {
   return (
     <div>
-      <SubHeader title="Visão geral">
+      <SubHeader title="Tickets">
         <Button>
           <Plus /> Novo Ticket
         </Button>

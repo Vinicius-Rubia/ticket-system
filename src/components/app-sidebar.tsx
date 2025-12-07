@@ -18,12 +18,12 @@ const data = {
       title: "Dashboard",
       isActive: true,
       icon: LayoutGrid,
-      url: "/",
+      url: "/dashboard",
     },
     {
       title: "Usuários",
       icon: Users,
-      url: "/",
+      url: "/users",
     },
     {
       title: "Tickets",
@@ -33,12 +33,12 @@ const data = {
     {
       title: "Oficiais",
       icon: Users2,
-      url: "/",
+      url: "/officials",
     },
     {
       title: "Configurações",
       icon: Settings,
-      url: "/",
+      url: "/settings",
     },
   ],
 };
@@ -57,11 +57,14 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             <SidebarMenu>
               {data.navMain.map((item) => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild size="lg" isActive={item.isActive}>
-                    <NavLink to={item.url}>
-                      <item.icon className="size-5!" /> {item.title}
-                    </NavLink>
-                  </SidebarMenuButton>
+                  <NavLink to={item.url}>
+                    {({ isActive }) => (
+                      <SidebarMenuButton size="lg" isActive={isActive}>
+                        <item.icon className="size-5" />
+                        {item.title}
+                      </SidebarMenuButton>
+                    )}
+                  </NavLink>
                 </SidebarMenuItem>
               ))}
             </SidebarMenu>
