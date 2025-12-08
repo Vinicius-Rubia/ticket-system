@@ -6,6 +6,7 @@ import { TicketStatus } from "@/components/ui/ticket-status";
 import { TICKET_TYPE_SELECT } from "@/constants/ticket-config";
 import type { Ticket } from "@/types/ticket";
 import { format } from "date-fns";
+import { Link } from "react-router-dom";
 
 interface TicketCardProps {
   ticket: Ticket;
@@ -17,7 +18,7 @@ export function TicketCard({ ticket }: TicketCardProps) {
       <div className="flex items-center justify-between flex-wrap gap-4">
         <div className="flex items-center gap-2.5">
           <TicketStatus variant={ticket.status} />
-          <h4 className="font-semibold">{ticket.ticketId}</h4>
+          <h4 className="font-semibold">Ticket - {ticket.ticketId}</h4>
           <Badge variant="secondary">
             {TICKET_TYPE_SELECT[ticket.ticketType]}
           </Badge>
@@ -41,8 +42,8 @@ export function TicketCard({ ticket }: TicketCardProps) {
         <span className="font-medium text-xs text-muted-foreground">
           Postado às {format(ticket.publishedAt, "HH:mm")}
         </span>
-        <Button variant="link" size="sm">
-          Abrir Ticket
+        <Button asChild variant="link" size="sm">
+          <Link to={`/ticket/${ticket.ticketId}`}>Abrir Ticket</Link>
         </Button>
       </div>
     </div>
