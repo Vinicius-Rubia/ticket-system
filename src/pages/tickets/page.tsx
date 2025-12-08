@@ -25,7 +25,7 @@ export function TicketsPage() {
       </SubHeader>
 
       <section className="flex items-start gap-6">
-        <main className="flex-1 space-y-6 bg-white rounded px-5 py-6">
+        <main className="flex-1 space-y-6 sm:bg-white rounded sm:px-5 sm:py-6">
           {TICKETS_DATA.map((ticket) => (
             <TicketCard key={ticket.ticketId} ticket={ticket} />
           ))}

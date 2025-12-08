@@ -50,7 +50,7 @@ export function CreateQuickTicket({ setOpen, open }: CreateQuickTicketProps) {
   }
 
   return (
-    <aside className="sticky top-4 bg-white rounded px-5 py-6 max-w-md">
+    <aside className="sticky top-4 bg-white rounded px-5 py-6 max-w-md flex-1">
       <Button
         size="icon-sm"
         variant="outline"

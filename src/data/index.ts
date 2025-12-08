@@ -1,10 +1,12 @@
 import { ETicketStatus } from "@/enums/ticket-status";
+import { ETicketType } from "@/enums/ticket-type";
 import type { Ticket } from "@/types/ticket";
 
 export const TICKETS_DATA: Ticket[] = [
   {
     ticketId: "Ticket# 2025-CX101",
     status: ETicketStatus.NEW_TICKET,
+    ticketType: ETicketType.ACCESS,
     userImageUrl: "https://randomuser.me/api/portraits/men/34.jpg",
     username: "Carlos Mota",
     userInitials: "CM",
@@ -16,6 +18,7 @@ export const TICKETS_DATA: Ticket[] = [
   {
     ticketId: "Ticket# 2025-CX102",
     status: ETicketStatus.ON_GOING_TICKET,
+    ticketType: ETicketType.BUG,
     userImageUrl: "https://randomuser.me/api/portraits/women/45.jpg",
     username: "Ana Beatriz",
     userInitials: "AB",
@@ -27,6 +30,7 @@ export const TICKETS_DATA: Ticket[] = [
   {
     ticketId: "Ticket# 2025-CX103",
     status: ETicketStatus.RESOLVED_TICKET,
+    ticketType: ETicketType.FEATURE_REQUEST,
     userImageUrl: "https://randomuser.me/api/portraits/men/58.jpg",
     username: "Pedro Costa",
     userInitials: "PC",
@@ -38,6 +42,7 @@ export const TICKETS_DATA: Ticket[] = [
   {
     ticketId: "Ticket# 2025-CX104",
     status: ETicketStatus.ON_GOING_TICKET,
+    ticketType: ETicketType.ACCESS,
     userImageUrl: "https://randomuser.me/api/portraits/women/22.jpg",
     username: "Juliana Silva",
     userInitials: "JS",
@@ -49,6 +54,7 @@ export const TICKETS_DATA: Ticket[] = [
   {
     ticketId: "Ticket# 2025-CX105",
     status: ETicketStatus.NEW_TICKET,
+    ticketType: ETicketType.FEATURE_REQUEST,
     userImageUrl: "https://randomuser.me/api/portraits/men/15.jpg",
     username: "Ricardo Alves",
     userInitials: "RA",
@@ -60,6 +66,7 @@ export const TICKETS_DATA: Ticket[] = [
   {
     ticketId: "Ticket# 2025-CX106",
     status: ETicketStatus.RESOLVED_TICKET,
+    ticketType: ETicketType.SUPORT_TECHNICAL,
     userImageUrl: "https://randomuser.me/api/portraits/women/36.jpg",
     username: "Mariana Rocha",
     userInitials: "MR",
@@ -71,6 +78,7 @@ export const TICKETS_DATA: Ticket[] = [
   {
     ticketId: "Ticket# 2025-CX107",
     status: ETicketStatus.ON_GOING_TICKET,
+    ticketType: ETicketType.SUPORT_TECHNICAL,
     userImageUrl: "https://randomuser.me/api/portraits/men/66.jpg",
     username: "Fernando Gomes",
     userInitials: "FG",
@@ -82,6 +90,7 @@ export const TICKETS_DATA: Ticket[] = [
   {
     ticketId: "Ticket# 2025-CX108",
     status: ETicketStatus.NEW_TICKET,
+    ticketType: ETicketType.ACCESS,
     userImageUrl: "https://randomuser.me/api/portraits/women/51.jpg",
     username: "Patrícia Fernandes",
     userInitials: "PF",
@@ -93,6 +102,7 @@ export const TICKETS_DATA: Ticket[] = [
   {
     ticketId: "Ticket# 2025-CX109",
     status: ETicketStatus.RESOLVED_TICKET,
+    ticketType: ETicketType.BUG,
     userImageUrl: "https://randomuser.me/api/portraits/men/27.jpg",
     username: "Bruno Henrique",
     userInitials: "BH",
@@ -104,6 +114,7 @@ export const TICKETS_DATA: Ticket[] = [
   {
     ticketId: "Ticket# 2025-CX110",
     status: ETicketStatus.ON_GOING_TICKET,
+    ticketType: ETicketType.FEATURE_REQUEST,
     userImageUrl: "https://randomuser.me/api/portraits/women/13.jpg",
     username: "Sofia Castro",
     userInitials: "SC",
