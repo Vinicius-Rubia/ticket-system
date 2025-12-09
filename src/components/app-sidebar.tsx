@@ -9,7 +9,8 @@ import {
   SidebarMenuItem,
   SidebarRail,
 } from "@/components/ui/sidebar";
-import { LayoutGrid, Settings, Ticket, Users, Users2 } from "lucide-react";
+import { IMAGES } from "@/constants/images";
+import { LayoutGrid, Settings, Ticket } from "lucide-react";
 import { NavLink } from "react-router-dom";
 
 const data = {
@@ -21,19 +22,9 @@ const data = {
       url: "/dashboard",
     },
     {
-      title: "Usuários",
-      icon: Users,
-      url: "/users",
-    },
-    {
       title: "Tickets",
       icon: Ticket,
       url: "/",
-    },
-    {
-      title: "Oficiais",
-      icon: Users2,
-      url: "/officials",
     },
     {
       title: "Configurações",
@@ -47,9 +38,11 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar {...props}>
       <SidebarHeader>
-        <h1 className="uppercase text-center text-2xl font-semibold text-[#2E2C34] mt-7 mb-4">
-          Ticket Lead
-        </h1>
+        <img
+          src={IMAGES.SantanderLogo}
+          alt="Santander"
+          className="my-4 w-50 mx-auto object-cover"
+        />
       </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>
