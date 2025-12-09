@@ -60,8 +60,19 @@ export function Header() {
               </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>GitHub</DropdownMenuItem>
-            <DropdownMenuItem>Linkedin</DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <a href="https://github.com/Vinicius-Rubia" target="_blank">
+                GitHub
+              </a>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <a
+                href="https://www.linkedin.com/in/vinicius-rubia/"
+                target="_blank"
+              >
+                Linkedin
+              </a>
+            </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem variant="destructive">
               Sair
