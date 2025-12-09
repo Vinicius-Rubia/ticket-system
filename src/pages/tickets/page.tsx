@@ -83,22 +83,10 @@ export function TicketsPage() {
         </main>
 
         <Activity mode={openQuickTicket ? "visible" : "hidden"}>
-          <AnimatePresence>
-            {openQuickTicket && (
-              <motion.div
-                initial={{ x: "100%", opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                exit={{ x: "100%", opacity: 0 }}
-                transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                className="h-full"
-              >
-                <CreateQuickTicket
-                  open={openQuickTicket}
-                  setOpen={setOpenQuickTicket}
-                />
-              </motion.div>
-            )}
-          </AnimatePresence>
+          <CreateQuickTicket
+            open={openQuickTicket}
+            setOpen={setOpenQuickTicket}
+          />
         </Activity>
       </section>
     </div>
