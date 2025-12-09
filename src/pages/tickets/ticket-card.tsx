@@ -14,7 +14,7 @@ interface TicketCardProps {
 
 export function TicketCard({ ticket }: TicketCardProps) {
   return (
-    <div className="border bg-[#FEFEFE] rounded p-4 pb-2">
+    <div className="border bg-accent/80 dark:bg-input/30 rounded p-4 pb-2">
       <div className="flex items-center justify-between flex-wrap gap-4">
         <div className="flex items-center gap-2.5">
           <TicketStatus variant={ticket.status} />

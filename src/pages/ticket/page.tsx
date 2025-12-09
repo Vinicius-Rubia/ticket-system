@@ -42,7 +42,7 @@ export function TicketPage() {
         </Button>
         <SubHeader title="Ticket" />
       </div>
-      <main className="bg-white rounded p-5 space-y-6">
+      <main className="bg-accent dark:bg-accent/30 rounded p-5 space-y-6">
         <div className="flex items-center justify-between flex-wrap gap-4">
           <div className="flex items-center flex-wrap gap-2.5">
             <TicketStatus variant={ticket.status} />

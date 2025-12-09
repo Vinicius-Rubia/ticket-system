@@ -29,7 +29,7 @@ export function ReplyTicketForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="border border-muted bg-[#FCFCFC] rounded p-5 space-y-4 grid"
+        className="border border-muted bg-primary-foreground dark:bg-accent/30 rounded p-5 space-y-4 grid"
       >
         <FormField
           control={form.control}

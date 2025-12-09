@@ -48,7 +48,7 @@ export function TicketsPage() {
       </SubHeader>
 
       <section className="flex items-start gap-6">
-        <main className="flex-1 space-y-6 sm:bg-white rounded sm:px-5 sm:py-6">
+        <main className="flex-1 space-y-6 sm:bg-accent sm:dark:bg-accent/30 rounded sm:px-5 sm:py-6">
           <FilterFields
             setQuery={setTicketQuery}
             query={ticketQuery}

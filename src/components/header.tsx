@@ -8,36 +8,29 @@ import {
   DropdownMenuShortcut,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import {
-  BellDot,
-  ChevronDown,
-  LogOut,
-  Settings,
-  UserRoundPen,
-} from "lucide-react";
+import { ChevronDown, LogOut, Settings, UserRoundPen } from "lucide-react";
+import { ModeToggle } from "./mode-toggle";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { Button } from "./ui/button";
 import { SidebarTrigger } from "./ui/sidebar";
 
 export function Header() {
   return (
-    <header className="bg-white flex h-16 shrink-0 items-center justify-between gap-2 border-b px-4">
+    <header className="bg-sidebar flex h-16 shrink-0 items-center justify-between gap-2 border-b px-4">
       <div className="flex items-center gap-2">
         <SidebarTrigger className="-ml-1" />
-        <h2 className="text-lg text-[#2E2C34] hidden sm:block">
+        <h2 className="text-lg hidden sm:block">
           Bem vindo! <span className="font-semibold">Vinicius Rubia</span>
         </h2>
       </div>
       <div className="flex items-center gap-4">
-        <Button variant="outline" size="icon-lg" className="rounded-full">
-          <BellDot />
-        </Button>
+        <ModeToggle />
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button
               variant="ghost"
               size="lg"
-              className="pr-2! bg-[#f1f1f1] rounded-full pl-1.5!"
+              className="pr-2! bg-muted rounded-full pl-1.5!"
             >
               <Avatar>
                 <AvatarImage
