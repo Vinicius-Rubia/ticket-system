@@ -4,25 +4,17 @@ import { TICKETS_DATA } from "@/data";
 import type { TicketStatusValue } from "@/enums/ticket-status";
 import { AnimatePresence, motion } from "framer-motion";
 import { Plus } from "lucide-react";
-import { Activity, useState } from "react";
-import { CreateQuickTicket } from "./create-quick-ticket";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import { EmptyTicket } from "./empty-ticket";
 import { FilterFields } from "./filter-fields";
 import { TicketCard } from "./ticket-card";
 
 export function TicketsPage() {
-  const [openQuickTicket, setOpenQuickTicket] = useState(false);
   const [ticketQuery, setTicketQuery] = useState("");
   const [ticketTypeSelect, setTicketTypeSelect] = useState<
     TicketStatusValue | "all"
   >("all");
-
-  const handleOpenQuickTicket = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.currentTarget.blur();
-
-    if (openQuickTicket) return;
-    setOpenQuickTicket(true);
-  };
 
   const filteredTickets = () => {
     const query = ticketQuery.toLowerCase();
@@ -43,8 +35,10 @@ export function TicketsPage() {
   return (
     <div>
       <SubHeader title="Tickets">
-        <Button onClick={handleOpenQuickTicket}>
-          <Plus /> Novo Ticket
+        <Button asChild>
+          <Link to="/tickets/new">
+            <Plus /> Novo Ticket
+          </Link>
         </Button>
       </SubHeader>
 
@@ -76,18 +70,11 @@ export function TicketsPage() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
               >
-                <EmptyTicket onNewTicket={handleOpenQuickTicket} />
+                <EmptyTicket />
               </motion.div>
             )}
           </AnimatePresence>
         </main>
-
-        <Activity mode={openQuickTicket ? "visible" : "hidden"}>
-          <CreateQuickTicket
-            open={openQuickTicket}
-            setOpen={setOpenQuickTicket}
-          />
-        </Activity>
       </section>
     </div>
   );

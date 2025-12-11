@@ -24,7 +24,7 @@ import type { CreateTicketSchemaType } from "@/validations/schemas-types";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 
-export function TicketForm({ className }: React.ComponentProps<"form">) {
+export function CreateTicketForm({ className }: React.ComponentProps<"form">) {
   const form = useForm<CreateTicketSchemaType>({
     resolver: zodResolver(CreateTicketSchema),
     defaultValues: {
@@ -47,48 +47,50 @@ export function TicketForm({ className }: React.ComponentProps<"form">) {
         onSubmit={form.handleSubmit(onSubmit)}
         className={cn("space-y-6 grid", className)}
       >
-        <FormField
-          control={form.control}
-          name="ticketType"
-          render={({ field, fieldState }) => (
-            <FormItem>
-              <FormLabel>Tipo de ticket</FormLabel>
-              <FormControl>
-                <Select
-                  onValueChange={(value) => field.onChange(Number(value))}
-                >
-                  <SelectTrigger
-                    aria-invalid={fieldState.invalid}
-                    className="w-full"
+        <div className="grid sm:grid-cols-2 gap-6">
+          <FormField
+            control={form.control}
+            name="ticketType"
+            render={({ field, fieldState }) => (
+              <FormItem>
+                <FormLabel>Tipo de ticket</FormLabel>
+                <FormControl>
+                  <Select
+                    onValueChange={(value) => field.onChange(Number(value))}
                   >
-                    <SelectValue placeholder="Selecione o tipo" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {ticketTypes.map((typeId) => (
-                      <SelectItem key={typeId} value={String(typeId)}>
-                        {TICKET_TYPE_SELECT[typeId]}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="ticketTitle"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Título do ticket</FormLabel>
-              <FormControl>
-                <Input placeholder="Digite o título" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+                    <SelectTrigger
+                      aria-invalid={fieldState.invalid}
+                      className="w-full"
+                    >
+                      <SelectValue placeholder="Selecione o tipo" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {ticketTypes.map((typeId) => (
+                        <SelectItem key={typeId} value={String(typeId)}>
+                          {TICKET_TYPE_SELECT[typeId]}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="ticketTitle"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Título do ticket</FormLabel>
+                <FormControl>
+                  <Input placeholder="Digite o título" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        </div>
         <FormField
           control={form.control}
           name="ticketMessage"
@@ -98,7 +100,7 @@ export function TicketForm({ className }: React.ComponentProps<"form">) {
               <FormControl>
                 <Textarea
                   placeholder="Digite o problema aqui..."
-                  className="resize-none max-h-24"
+                  className="resize-none h-24"
                   {...field}
                 />
               </FormControl>
@@ -106,7 +108,9 @@ export function TicketForm({ className }: React.ComponentProps<"form">) {
             </FormItem>
           )}
         />
-        <Button size="lg">Enviar</Button>
+        <Button size="lg" className="sm:ml-auto">
+          Enviar
+        </Button>
       </form>
     </Form>
   );

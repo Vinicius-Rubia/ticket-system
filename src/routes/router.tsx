@@ -1,4 +1,5 @@
 import { BaseLayout } from "@/layouts/base-layout";
+import { CreateTicketPage } from "@/pages/create-ticket/page";
 import { DashboardPage } from "@/pages/dashboard/page";
 import { LoginPage } from "@/pages/login/page";
 import { TicketPage } from "@/pages/ticket/page";
@@ -11,6 +12,7 @@ export function AppRoutes() {
       <Routes>
         <Route element={<BaseLayout />}>
           <Route path="/tickets" element={<TicketsPage />} />
+          <Route path="/tickets/new" element={<CreateTicketPage />} />
           <Route path="/tickets/:ticketId" element={<TicketPage />} />
           <Route path="/dashboard" element={<DashboardPage />} />
         </Route>

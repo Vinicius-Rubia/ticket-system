@@ -8,13 +8,9 @@ import {
   EmptyTitle,
 } from "@/components/ui/empty";
 import { Plus, Ticket } from "lucide-react";
-import type { MouseEvent } from "react";
+import { Link } from "react-router-dom";
 
-interface EmptyTicketProps {
-  onNewTicket: (e: MouseEvent<HTMLButtonElement>) => void;
-}
-
-export function EmptyTicket({ onNewTicket }: EmptyTicketProps) {
+export function EmptyTicket() {
   return (
     <Empty className="border border-dashed">
       <EmptyHeader>
@@ -27,9 +23,11 @@ export function EmptyTicket({ onNewTicket }: EmptyTicketProps) {
         </EmptyDescription>
       </EmptyHeader>
       <EmptyContent>
-        <Button size="sm" onClick={onNewTicket}>
-          <Plus />
-          Novo ticket
+        <Button size="sm" asChild>
+          <Link to="/tickets/new">
+            <Plus />
+            Novo ticket
+          </Link>
         </Button>
       </EmptyContent>
     </Empty>
