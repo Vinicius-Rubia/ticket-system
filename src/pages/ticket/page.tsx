@@ -63,7 +63,7 @@ export function TicketPage() {
 
         <div className="space-y-1">
           <span className="font-medium text-xs text-muted-foreground">
-            Postado às {format(ticket.publishedAt, "HH:mm")}
+            Postado às {format(ticket.createdAt, "HH:mm")}
           </span>
           <h2 className="font-semibold text-lg">{ticket.title}</h2>
           <p className="text-sm text-muted-foreground whitespace-pre-line">

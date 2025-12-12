@@ -10,5 +10,16 @@ export interface Ticket {
   userInitials: string;
   title: string;
   description: string;
-  publishedAt: Date;
+  replies?: ReplyTicket[];
+  createdAt: Date;
+}
+
+export interface ReplyTicket {
+  id: string;
+  username: string;
+  userImageUrl: string;
+  replyMessage: string;
+  userInitials: string;
+  isCompanyResponse: boolean;
+  createdAt: Date;
 }

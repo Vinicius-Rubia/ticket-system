@@ -1,3 +1,4 @@
+import { IMAGES } from "@/constants/images";
 import { ETicketStatus } from "@/enums/ticket-status";
 import { ETicketType } from "@/enums/ticket-type";
 import type { Ticket } from "@/types/ticket";
@@ -17,7 +18,51 @@ export const TICKETS_DATA: Ticket[] = [
       `Tentei em diferentes navegadores (Chrome, Firefox e Edge) e até limpei cache/cookies, mas nada resolveu. Também testei em outro computador e o problema persiste.\n` +
       `Poderiam verificar se há algum bloqueio na minha conta ou um bug no sistema de autenticação? Preciso acessar com urgência para confirmar um pagamento.\n\n` +
       `Obrigado,\nCarlos Mota.`,
-    publishedAt: new Date(2025, 11, 5, 9, 15),
+    createdAt: new Date(2025, 11, 5, 9, 15),
+    replies: [
+      {
+        id: "5d1fvs56d1v65v1",
+        username: "José Oliveira",
+        userInitials: "JO",
+        userImageUrl:
+          "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg",
+        isCompanyResponse: false,
+        replyMessage: "Boa noite, eu também estive o mesmo problema...",
+        createdAt: new Date(2025, 11, 5, 9, 15),
+      },
+      {
+        id: "dthdtbytb8",
+        username: "Sofhia Batista",
+        userInitials: "SB",
+        userImageUrl:
+          "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg",
+        isCompanyResponse: false,
+        replyMessage:
+          "Oii! Eu conseguir acessar minha conta normalmente. Estou usando o navegador Safari.",
+        createdAt: new Date(2025, 11, 5, 9, 15),
+      },
+      {
+        id: "dthdtbytb8ccdc",
+        username: "Sofhia Batista",
+        userInitials: "SB",
+        userImageUrl:
+          "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg",
+        isCompanyResponse: false,
+        replyMessage:
+          "Oii! Eu conseguir acessar minha conta normalmente. Estou usando o navegador Safari.",
+        createdAt: new Date(2025, 11, 5, 9, 15),
+      },
+      {
+        id: "dsthnsiorn56",
+        userInitials: "S",
+        username: "Santander",
+        userImageUrl: IMAGES.SantanderSampleLogo,
+        isCompanyResponse: true,
+        replyMessage:
+          "Olá Carlos Mota! Notificamos via e-mail e mídias sociais que nesse horário estariamos aplicando algumas mudanças no sistema e deria haver instabilidades. Tente novamente mais tarde e se o problema persistir fique a vontade para abrir um novo ticket. Estamos aqui para te ajudar :).",
+        createdAt: new Date(2025, 11, 5, 9, 15),
+      },
+    ],
   },
   {
     ticketId: "2025-CX102",
@@ -33,7 +78,30 @@ export const TICKETS_DATA: Ticket[] = [
       `Já tentei realizar a ação em dois navegadores distintos (Chrome e Safari), em modo incógnito, e mesmo assim o erro continua acontecendo.\n` +
       `Preciso desse boleto para efetuar o pagamento até o prazo de vencimento, caso contrário corro risco de suspensão da conta. Poderiam verificar se há algum problema no módulo de geração de boletos?\n\n` +
       `Aguardo retorno,\nAna B.`,
-    publishedAt: new Date(2025, 11, 4, 14, 30),
+    createdAt: new Date(2025, 11, 4, 14, 30),
+    replies: [
+      {
+        id: "123",
+        username: "Abraão Sones",
+        userInitials: "AS",
+        userImageUrl:
+          "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg",
+        isCompanyResponse: false,
+        replyMessage: "Boa noite, eu também estive o mesmo problema...",
+        createdAt: new Date(2025, 11, 5, 9, 15),
+      },
+      {
+        id: "dsa56v1651fh",
+        username: "Mônica Paiva",
+        userInitials: "MP",
+        userImageUrl:
+          "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg",
+        isCompanyResponse: false,
+        replyMessage:
+          "Oii! Eu conseguir acessar minha conta normalmente. Estou usando o navegador Safari.",
+        createdAt: new Date(2025, 11, 5, 9, 15),
+      },
+    ],
   },
   {
     ticketId: "2025-CX103",
@@ -49,7 +117,30 @@ export const TICKETS_DATA: Ticket[] = [
       `Peço que confirmem o estorno do valor cobrado hoje, ou ao menos o cancelamento sem cobrança futura, conforme política que consultei nos termos.\n` +
       `Caso precise de mais informações (documentos, login, dados de pagamento), fico à disposição.\n\n` +
       `Atenciosamente,\nPedro C.`,
-    publishedAt: new Date(2025, 11, 3, 11, 0),
+    createdAt: new Date(2025, 11, 3, 11, 0),
+    replies: [
+      {
+        id: "zdirjgnpisonjhipr6np5675",
+        username: "Abraão Sones",
+        userInitials: "AS",
+        userImageUrl:
+          "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg",
+        isCompanyResponse: false,
+        replyMessage: "Boa noite, eu também estive o mesmo problema...",
+        createdAt: new Date(2025, 11, 5, 9, 15),
+      },
+      {
+        id: "sfgh4f54hd654yjyt",
+        username: "Mônica Paiva",
+        userInitials: "MP",
+        userImageUrl:
+          "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg",
+        isCompanyResponse: false,
+        replyMessage:
+          "Oii! Eu conseguir acessar minha conta normalmente. Estou usando o navegador Safari.",
+        createdAt: new Date(2025, 11, 5, 9, 15),
+      },
+    ],
   },
   {
     ticketId: "2025-CX104",
@@ -67,7 +158,7 @@ export const TICKETS_DATA: Ticket[] = [
       ` - O valor é cobrado automaticamente via boleto ou cartão? Há desconto para pagamentos anuais?\n\n` +
       `Se possível, poderiam enviar uma tabela comparativa ou explicar em detalhes para que eu possa decidir com clareza.\n\n` +
       `Obrigada,\nJuliana S.`,
-    publishedAt: new Date(2025, 10, 30, 16, 45),
+    createdAt: new Date(2025, 10, 30, 16, 45),
   },
   {
     ticketId: "2025-CX105",
@@ -83,7 +174,19 @@ export const TICKETS_DATA: Ticket[] = [
       `Esperei cerca de 24h para ver se atualizava, mas nada mudou. Preciso dessa liberação para continuar usando os serviços contratados.\n` +
       `Poderiam verificar se o pagamento foi realmente compensado ou se existe algum erro de sincronização na base de dados?\n\n` +
       `Grato,\nRicardo A.`,
-    publishedAt: new Date(2025, 11, 5, 10, 5),
+    createdAt: new Date(2025, 11, 5, 10, 5),
+    replies: [
+      {
+        id: "zdfngldknglkng123",
+        username: "Abraão Sones",
+        userInitials: "AS",
+        userImageUrl:
+          "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg",
+        isCompanyResponse: false,
+        replyMessage: "Boa noite, eu também estive o mesmo problema...",
+        createdAt: new Date(2025, 11, 5, 9, 15),
+      },
+    ],
   },
   {
     ticketId: "2025-CX106",
@@ -99,7 +202,30 @@ export const TICKETS_DATA: Ticket[] = [
       `Não recebi outro e-mail de recuperação e o link antigo parece não mais valer. Isso me deixou impossibilitada de acessar a conta.\n` +
       `Peço ajuda urgente para resetar minha senha ou gerar outro link de recuperação válido.\n\n` +
       `Obrigada,\nMariana R.`,
-    publishedAt: new Date(2025, 10, 28, 21, 20),
+    createdAt: new Date(2025, 10, 28, 21, 20),
+    replies: [
+      {
+        id: "s4g84d8h4rt84h84876845",
+        username: "Abraão Sones",
+        userInitials: "AS",
+        userImageUrl:
+          "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg",
+        isCompanyResponse: false,
+        replyMessage: "Boa noite, eu também estive o mesmo problema...",
+        createdAt: new Date(2025, 11, 5, 9, 15),
+      },
+      {
+        id: "dzfrgnl43knlkn1111",
+        username: "Mônica Paiva",
+        userInitials: "MP",
+        userImageUrl:
+          "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg",
+        isCompanyResponse: false,
+        replyMessage:
+          "Oii! Eu conseguir acessar minha conta normalmente. Estou usando o navegador Safari.",
+        createdAt: new Date(2025, 11, 5, 9, 15),
+      },
+    ],
   },
   {
     ticketId: "2025-CX107",
@@ -115,7 +241,7 @@ export const TICKETS_DATA: Ticket[] = [
       `O relatório desta vez seria essencial para verificar os valores faturados e pagamentos recebidos. Preciso desse relatório até o final da semana para encaminhar à minha contabilidade.\n\n` +
       `Por favor, poderiam verificar se há falha no backend ou na API de relatórios e me dar um retorno?\n\n` +
       `Abraços,\nFernando G.`,
-    publishedAt: new Date(2025, 11, 2, 13, 55),
+    createdAt: new Date(2025, 11, 2, 13, 55),
   },
   {
     ticketId: "2025-CX108",
@@ -130,7 +256,7 @@ export const TICKETS_DATA: Ticket[] = [
       `Gostaria de solicitar o upgrade da minha assinatura para o plano Premium a partir do próximo ciclo. Atualmente estou no plano Básico e gostaria de saber o valor pró-rata desse mês e como será feita a cobrança.\n` +
       `Também quero confirmar se o acesso aos recursos avançados será imediato após a aprovação ou somente no próximo ciclo.\n\n` +
       `Agradeço desde já,\nPatrícia F.`,
-    publishedAt: new Date(2025, 11, 5, 8, 40),
+    createdAt: new Date(2025, 11, 5, 8, 40),
   },
   {
     ticketId: "2025-CX109",
@@ -146,7 +272,40 @@ export const TICKETS_DATA: Ticket[] = [
       `Já fechei o navegador, limpei cache e cookies, e até tentei em modo anônimo, mas o erro permanece. Isso me impede de usar qualquer funcionalidade da plataforma.\n` +
       `Por favor, verifiquem os logs do servidor ou a configuração da API para entender a causa desse erro. Preciso de acesso urgente para continuar minhas atividades.\n\n` +
       `Grato,\nBruno H.`,
-    publishedAt: new Date(2025, 10, 25, 19, 10),
+    createdAt: new Date(2025, 10, 25, 19, 10),
+    replies: [
+      {
+        id: "dsdsc1d5cd1c51c1dc5d1c51c5d1cd51c5",
+        username: "José Oliveira",
+        userInitials: "JO",
+        userImageUrl:
+          "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg",
+        isCompanyResponse: false,
+        replyMessage: "Boa noite, eu também estive o mesmo problema...",
+        createdAt: new Date(2025, 11, 5, 9, 15),
+      },
+      {
+        id: "ds4c5sc1ds5c1scdsd2334443434343",
+        username: "Sofhia Batista",
+        userInitials: "JO",
+        userImageUrl:
+          "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg",
+        isCompanyResponse: false,
+        replyMessage:
+          "Oii! Eu conseguir acessar minha conta normalmente. Estou usando o navegador Safari.",
+        createdAt: new Date(2025, 11, 5, 9, 15),
+      },
+      {
+        id: "304859800fg3458f3hfj4380hg4g",
+        username: "Santander",
+        userInitials: "JO",
+        userImageUrl: IMAGES.SantanderSampleLogo,
+        isCompanyResponse: true,
+        replyMessage:
+          "Olá Carlos Mota! Notificamos via e-mail e mídias sociais que nesse horário estariamos aplicando algumas mudanças no sistema e deria haver instabilidades. Tente novamente mais tarde e se o problema persistir fique a vontade para abrir um novo ticket. Estamos aqui para te ajudar :).",
+        createdAt: new Date(2025, 11, 5, 9, 15),
+      },
+    ],
   },
   {
     ticketId: "2025-CX110",
@@ -161,6 +320,39 @@ export const TICKETS_DATA: Ticket[] = [
       `Quero atualizar meu e-mail cadastrado para sofia.novo@example.com. Meu e-mail antigo era sofia.antigo@example.com. Já tentei alterar nas configurações, mas apareceu uma mensagem de erro: "Falha na atualização de dados", e a troca não foi efetuada.\n` +
       `Gostaria de saber se há um processo manual para realizar essa alteração ou se posso fazer por meio do suporte. Preciso da mudança o quanto antes por motivos de entrega de documentos importantes.\n\n` +
       `Obrigado,\nSofia C.`,
-    publishedAt: new Date(2025, 11, 1, 15, 25),
+    createdAt: new Date(2025, 11, 1, 15, 25),
+    replies: [
+      {
+        id: "slgnl453n43lnk5lkn4",
+        username: "José Oliveira",
+        userInitials: "JO",
+        userImageUrl:
+          "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg",
+        isCompanyResponse: false,
+        replyMessage: "Boa noite, eu também estive o mesmo problema...",
+        createdAt: new Date(2025, 11, 5, 9, 15),
+      },
+      {
+        id: "fdnklkn45kln5kln4545454545",
+        username: "Sofhia Batista",
+        userInitials: "JO",
+        userImageUrl:
+          "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg",
+        isCompanyResponse: false,
+        replyMessage:
+          "Oii! Eu conseguir acessar minha conta normalmente. Estou usando o navegador Safari.",
+        createdAt: new Date(2025, 11, 5, 9, 15),
+      },
+      {
+        id: "s5dv1fds5v1ds578945612130fdsvfdsvf",
+        username: "Santander",
+        userInitials: "JO",
+        userImageUrl: IMAGES.SantanderSampleLogo,
+        isCompanyResponse: true,
+        replyMessage:
+          "Olá Carlos Mota! Notificamos via e-mail e mídias sociais que nesse horário estariamos aplicando algumas mudanças no sistema e deria haver instabilidades. Tente novamente mais tarde e se o problema persistir fique a vontade para abrir um novo ticket. Estamos aqui para te ajudar :).",
+        createdAt: new Date(2025, 11, 5, 9, 15),
+      },
+    ],
   },
 ];
